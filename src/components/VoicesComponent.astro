@@ -1,0 +1,145 @@
+<section id="voices-component">
+<div id="voices-component" class="voices-component">
+    <div class="title-row">
+        <h1>Stemmer ud af boksen</h1>
+        <div class="line"></div>
+    </div>
+    <div class="paraghraph-container">
+        <p>Vi arbejder med kreativ udfoldelse, alternative engagementsformer og bringer den demokratiske dialog hen imed et sted, hvor flere kan være med. 
+            Vi udfordrer forståelsen af demokratisk engagement, som noget, der hovedsageligt finder sted i en stemmeboks. Vi skaber mødesteder og giver plads til de stemmer, 
+            der hovedsageligt kan høres uden stemmeboksen - ikke bare hvert fjerde år, men hver dag.
+        </p>
+    </div>
+    <div class="image-container">
+        <img src="/plakat.png" alt="plakat" class="plakat-image" />
+    </div>
+    <div class="link-component">
+        <h4>Læs mere på Stemme ud af boksens helt egen hjemmeside!</h4>
+        <a href="https://dfunk.dk/stemmerudafboksen/" class="button-link">Klik her</a>
+    </div>
+</div>
+
+
+
+
+<style>
+   .voices-component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    min-height: 100vh;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 80px;
+    width: 100%; /* Ensure full width */
+}
+
+.title-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    color: #F0F0F0;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.title-row h1 {
+    margin: 0;
+    font-size: var(--font-size-large);
+    font-weight: bolder;
+}
+
+.line {
+    height: 2px;
+    background: #F0F0F0;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 20px;
+}
+
+.paraghraph-container {
+    display: flex;
+    justify-content: center;
+    color: #F0F0F0;
+    padding: 40px;
+    font-size: 1.2em; /* Relative font size */
+    text-align: start; /* Center text for better readability on small screens */
+}
+
+.plakat-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.link-component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    color: #F0F0F0;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 70px;
+    font-size: 1.4em; /* Relative font size */
+}
+
+.button-link {
+    color: white;
+    padding: 10px 50px;
+    background-color: #5009D2;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    max-width: 300px;
+    text-align: center; /* Center the text inside the button */
+}
+
+.button-link:hover {
+    background-color: #000000;
+    border: 2px solid #5009D2;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+    .title-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .line {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    .paraghraph-container {
+        padding: 20px;
+        font-size: 1em;
+    }
+
+    .link-component {
+        font-size: 1.2em;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-row h1 {
+        font-size: 4vw; /* Increase size for small screens */
+    }
+
+    .button-link {
+        padding: 8px 16px;
+        font-size: 1em;
+    }
+}  
+</style>

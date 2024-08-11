@@ -1,0 +1,62 @@
+---
+import Button from '../components/Buttons.astro';
+---
+
+<nav class="navbar">
+    <Button label="Fremtidsvej" href="#future-component" />
+    <Button label="Stemmer ud af boksen" href="#voices-component" />
+    <Button label="Lokale fælleskaber" href="#local-community-component" />
+</nav>
+
+
+<style>
+.navbar {
+    display: flex;
+    flex-direction: row; /* Default to horizontal layout */
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* Space between buttons */
+    padding: 40px; /* Padding around the navbar */
+    background-color: #000000; /* Background color of the navbar */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.nav-button {
+    background-color: #000000; /* Button background color */
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid #FA4B00; /* Border color */
+    border-radius: 30px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 22px; /* Font size for buttons */
+    font-weight: bold;
+    transition: background-color 0.3s;
+    flex: 1 1 auto; /* Allows buttons to grow and shrink as needed */
+    max-width: 300px; /* Maximum width for buttons */
+}
+
+.nav-button:hover {
+    background-color: #FA4B00; /* Hover color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        gap: 10px; /* Reduced space between buttons */
+        width: 100%;
+    }
+}
+</style>
+
+<script>
+document.querySelectorAll('.nav-button').forEach(button => {
+    button.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+    });
+});
+</script>
+

@@ -1,0 +1,41 @@
+---
+/* front matter - inside these three dash lines we can add any sort of javascipt that wee want, including imports*/
+import Layout from '../layouts/Layout.astro';
+import NavBar from '../components/NavBar.astro';
+import Main from '../components/Main.astro';
+import Activities from '../components/Activities.astro';
+import Future from '../components/Future.astro';
+import VoicesComponent from '../components/VoicesComponent.astro';
+import LocalCommunityCompnent from '../components/LocalCommunityCompnent.astro';
+import Contact from '../components/Contact.astro';
+
+/* everything inside this Layout component is considered the slot and will be rendered inside the tag */
+---
+
+<Layout title=''>
+	<Main>
+		<!-- Navbar Component -->
+		<NavBar />
+		 <!-- Sections Components -->
+		<Activities/>
+		<div class="future-content">
+			<Future id="future-component"/>
+		</div>
+		<VoicesComponent id="voices-component"/>
+		<LocalCommunityCompnent id="local-community-component"/>
+		<Contact />
+		 <!-- JavaScript for smooth scrolling -->
+		 <script>
+			
+			function scrollToSection(sectionId) {
+				const section = document.getElementById(sectionId);
+				if (section) {
+					section.scrollIntoView({ behavior: 'smooth' });
+				}
+			}
+
+		</script>
+
+	</Main>
+</Layout>
+
